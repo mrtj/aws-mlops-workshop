@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.DS_Store
+
+# venv
+venv
+venv/*
+
+# Chalice deployents
+lambda/.chalice/deployed
+lambda/.chalice/deployments
+
+ __pycache__/
+ *.pyc
+.vscode
+.idea/*
