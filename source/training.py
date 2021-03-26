@@ -1,3 +1,7 @@
+!wget www.di.ens.fr/~lelarge/MNIST.tar.gz
+!tar -zxvf MNIST.tar.gz
+
+
 import time
 import sys
 import sagemaker
@@ -20,8 +24,8 @@ job_name = stack_name + "-" + commit_id + "-" + timestamp
 
 # Getting the data
 datasets.MNIST(
-    "data",
-    download=True,
+    f"./",
+    download=False,
     transform=transforms.Compose(
         [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]
     ),
